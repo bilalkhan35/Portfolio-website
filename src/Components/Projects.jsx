@@ -5,13 +5,13 @@ const projects = [
     title: "Islamic Chatbot",
     description:
       "An AI-powered chatbot that answers questions using Quran and Sunnah.",
-    github: "https://github.com/your-repo",
-    demo: "https://your-demo-link.com",
+    github: "https://github.com/bilalkhan35/Islamic-Ai-app.git",
+    demo: "https://islamic-ai-lhoea7kut-bilalkhans-projects-2eb8284d.vercel.app",
   },
   {
     title: "Portfolio Website",
     description: "This personal portfolio built with React & Tailwind.",
-    github: "https://github.com/your-portfolio",
+    github: "https://github.com/bilalkhan35/Portfolio-website",
     demo: "#",
   },
   // Add more projects as needed
