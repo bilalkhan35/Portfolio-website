@@ -14,7 +14,12 @@ const projects = [
     github: "https://github.com/bilalkhan35/Portfolio-website",
     demo: "#",
   },
-  // Add more projects as needed
+  {
+    title: "Search-Photos",
+    description: "A web app for searching and displaying photos.",
+    github: "https://github.com/bilalkhan35/Search-photos",
+    demo: "https://photovault.vercel.app",
+  },
 ];
 
 function Projects() {
