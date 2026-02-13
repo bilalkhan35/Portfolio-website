@@ -6,14 +6,15 @@ const projects = [
   {
     title: "Islamic Chatbot",
     description:
-      "An AI-powered chatbot that answers questions using Quran and Sunnah.",
+      "An AI-powered chatbot that answers questions using Quran and Sunnah, deployed on Vercel.",
     github: "https://github.com/bilalkhan35/Islamic-Ai-app.git",
     demo: "https://islamic-ai-lhoea7kut-bilalkhans-projects-2eb8284d.vercel.app",
     stack: ["React", "AI", "UI/UX"],
   },
   {
     title: "Portfolio Website",
-    description: "A personal portfolio built with React and Tailwind CSS.",
+    description:
+      "A personal portfolio built with React and Tailwind CSS, deployed on Vercel.",
     github: "https://github.com/bilalkhan35/Portfolio-website",
     demo: "https://portfolio-website-xnt9.vercel.app/",
     stack: ["React", "Tailwind", "Branding"],
