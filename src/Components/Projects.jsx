@@ -15,7 +15,7 @@ const projects = [
     title: "Portfolio Website",
     description: "A personal portfolio built with React and Tailwind CSS.",
     github: "https://github.com/bilalkhan35/Portfolio-website",
-    demo: "#",
+    demo: "https://portfolio-website-xnt9.vercel.app/",
     stack: ["React", "Tailwind", "Branding"],
   },
   {
@@ -64,11 +64,15 @@ function Projects() {
               className="group rounded-2xl border border-white/80 bg-white/75 backdrop-blur-xl shadow-lg shadow-slate-900/5 p-6 flex flex-col"
             >
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xl font-bold text-slate-900">{project.title}</h3>
+                <h3 className="text-xl font-bold text-slate-900">
+                  {project.title}
+                </h3>
                 <FaArrowRight className="text-slate-400 group-hover:text-sky-600 group-hover:translate-x-1 transition" />
               </div>
 
-              <p className="text-slate-600 mb-5 min-h-16">{project.description}</p>
+              <p className="text-slate-600 mb-5 min-h-16">
+                {project.description}
+              </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.stack.map((item) => (
@@ -117,4 +121,3 @@ function Projects() {
 }
 
 export default Projects;
-
