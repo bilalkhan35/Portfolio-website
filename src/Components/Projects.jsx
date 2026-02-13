@@ -8,7 +8,7 @@ const projects = [
     description:
       "An AI-powered chatbot that answers questions using Quran and Sunnah, deployed on Vercel.",
     github: "https://github.com/bilalkhan35/Islamic-Ai-app.git",
-    demo: "https://islamic-ai-lhoea7kut-bilalkhans-projects-2eb8284d.vercel.app",
+    demo: "https://islamic-ai-template.vercel.app/",
     stack: ["React", "AI", "UI/UX"],
   },
   {
