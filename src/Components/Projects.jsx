@@ -20,21 +20,24 @@ const projects = [
   },
   {
     title: "Search Photos",
-    description: "A fast web app for searching and displaying photos.",
+    description:
+      "A fast web app for searching and displaying photos, deployed on Vercel.",
     github: "https://github.com/bilalkhan35/Search-photos",
     demo: "https://photovault.vercel.app",
     stack: ["API", "React", "Performance"],
   },
   {
     title: "Online Store",
-    description: "A clean and responsive e-commerce UI demo.",
+    description:
+      "A clean and responsive e-commerce UI demo, deployed on Vercel.",
     github: "",
     demo: "https://online-store-coral-nine.vercel.app/",
     stack: ["Ecommerce", "Layout", "Tailwind"],
   },
   {
     title: "FoodBlog",
-    description: "A content-focused food blogging web app.",
+    description:
+      "A content-focused food blogging web app, deployed on Netlify.",
     github: "",
     demo: "https://foodiblogapp.netlify.app/",
     stack: ["Blog", "Responsive", "Frontend"],
