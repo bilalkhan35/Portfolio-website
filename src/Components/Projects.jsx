@@ -43,6 +43,14 @@ const projects = [
     demo: "https://foodiblogapp.netlify.app/",
     stack: ["Blog", "Responsive", "Frontend"],
   },
+  {
+    title: "Modern SaaS Landing",
+    description:
+      "A modern and professional SaaS landing page with conversion-focused design, deployed on Vercel.",
+    github: "",
+    demo: "https://modern-saas-landing-lilac.vercel.app/",
+    stack: ["SaaS", "Landing", "Design"],
+  },
 ];
 
 function Projects() {
