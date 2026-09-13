@@ -4,33 +4,49 @@ import {
   HiArrowUpRight,
   HiCheckBadge,
   HiMiniSparkles,
-  HiOutlineDevicePhoneMobile,
-  HiOutlinePaintBrush,
+  HiOutlineCodeBracketSquare,
+  HiOutlineServerStack,
 } from "react-icons/hi2";
 import profilePhoto from "../../fiverr-assets/newprofile.webp";
 
 const quickFacts = [
-  { value: "6", label: "Live project demos" },
-  { value: "React", label: "Frontend-first workflow" },
-  { value: "Mobile", label: "Responsive-ready design" },
+  { value: "9+", label: "Live project demos" },
+  { value: "MERN", label: "Full-stack apps" },
+  { value: "AI & RAG", label: "LLM & web integrations" },
 ];
 
 const promiseCards = [
   {
-    title: "Premium presentation",
-    icon: <HiOutlinePaintBrush />,
-    text: "Modern layouts, cleaner spacing, and visuals that feel more trustworthy.",
+    title: "End-to-end development",
+    icon: <HiOutlineServerStack />,
+    text: "From database schemas to polished React UIs — complete full-stack solutions, not just frontend.",
   },
   {
-    title: "Smooth interactions",
+    title: "AI & RAG integrations",
     icon: <HiMiniSparkles />,
-    text: "Motion and section flow that make the experience feel polished, not generic.",
+    text: "Smart chatbots, semantic retrieval, embeddings, and real-time LLM integrations into web apps.",
   },
   {
-    title: "Cross-device clarity",
-    icon: <HiOutlineDevicePhoneMobile />,
-    text: "Built to look sharp on desktop, tablet, and mobile from the first scroll.",
+    title: "Scalable architecture",
+    icon: <HiOutlineCodeBracketSquare />,
+    text: "Clean component structure, RESTful APIs, and deployment-ready code from day one.",
   },
+];
+
+const techStack = [
+  "React",
+  "Next.js",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Prisma",
+  "Tailwind CSS",
+  "PostgreSQL",
+  "AI & RAG",
+  "REST APIs",
+  "Git",
+  "Vite",
+  "Framer Motion",
 ];
 
 function Hero() {
@@ -49,13 +65,15 @@ function Hero() {
           >
             <span className="section-kicker mb-6">
               <HiCheckBadge className="text-base" />
-              Available for Fiverr Projects
+              Available for Full Stack & AI Projects
             </span>
 
             <h1 className="text-4xl font-extrabold leading-[1.02] tracking-tight text-slate-950 dark:text-slate-50 sm:text-5xl lg:text-7xl">
-              I design <span className="gradient-text">modern websites</span>
+              I build{" "}
+              <span className="gradient-text">full-stack web apps</span> &{" "}
+              <span className="gradient-text">AI solutions</span>
               <br />
-              that help your brand look serious, clear, and premium.
+              that are fast, scalable, and production-ready.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg font-semibold leading-relaxed text-slate-700 dark:text-slate-200 md:text-2xl">
@@ -63,10 +81,11 @@ function Hero() {
               <span className="text-sky-700 dark:text-sky-300">
                 <Typewriter
                   words={[
+                    "Full Stack MERN Developer",
+                    "Next.js App Builder",
+                    "AI & RAG Specialist",
                     "React Frontend Developer",
-                    "Landing Page Specialist",
-                    "Portfolio Website Designer",
-                    "AI Chatbot Integrator",
+                    "REST API Developer",
                   ]}
                   loop={0}
                   cursor
@@ -79,10 +98,9 @@ function Hero() {
             </p>
 
             <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300 md:text-lg">
-              I build conversion-focused portfolio sites, landing pages, and
-              frontend experiences with React, Tailwind CSS, and thoughtful
-              motion. The goal is always the same: make the work feel
-              professional and make your audience trust it fast.
+              I build full-stack web applications using React, Next.js, Node.js,
+              Express, and MongoDB, and integrate intelligent AI capabilities — including
+              custom RAG pipelines, intelligent chatbots, and API-driven workflows.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -127,10 +145,10 @@ function Hero() {
                 <div className="mb-5 flex items-center justify-between rounded-2xl border border-white/60 bg-white/55 px-4 py-3 dark:border-slate-700/70 dark:bg-slate-900/68">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300">
-                      Fiverr-Ready
+                      Production-Ready
                     </p>
                     <p className="mt-1 text-sm font-medium text-slate-600 dark:text-slate-300">
-                      Frontend design that feels current and client-facing
+                      Full-stack & AI solutions for real-world products
                     </p>
                   </div>
                   <div className="h-3 w-3 rounded-full bg-emerald-400 shadow-[0_0_0_8px_rgba(74,222,128,0.12)]" />
@@ -176,6 +194,31 @@ function Hero() {
             </div>
           </motion.div>
         </div>
+
+        {/* Tech Stack Marquee */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-14"
+        >
+          <p className="mb-4 text-center text-xs font-extrabold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+            Tech Stack I Work With
+          </p>
+          <div className="marquee-container glass-panel overflow-hidden rounded-2xl py-4">
+            <div className="marquee-track">
+              {[...techStack, ...techStack].map((tech, index) => (
+                <span
+                  key={`${tech}-${index}`}
+                  className="mx-4 inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-slate-200/80 bg-white/90 px-5 py-2.5 text-sm font-bold text-slate-700 shadow-sm dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200"
+                >
+                  <span className="h-2 w-2 rounded-full bg-sky-400" />
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

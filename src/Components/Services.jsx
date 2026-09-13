@@ -2,35 +2,42 @@ import { motion } from "framer-motion";
 import {
   HiOutlineCodeBracketSquare,
   HiOutlineRectangleGroup,
-  HiOutlineRocketLaunch,
+  HiOutlineSparkles,
+  HiOutlineServerStack,
 } from "react-icons/hi2";
 
 const services = [
   {
-    title: "Landing Pages",
-    icon: <HiOutlineRectangleGroup />,
-    text: "High-impact sections for services, products, and brands that need a stronger online first impression.",
-    points: ["Clear hero messaging", "Strong CTA structure", "Responsive layout"],
-  },
-  {
-    title: "Portfolio Websites",
-    icon: <HiOutlineRocketLaunch />,
-    text: "Portfolio experiences that present work in a cleaner, more premium, and more client-ready way.",
-    points: ["Project storytelling", "Modern card layouts", "Personal branding"],
-  },
-  {
-    title: "React Frontend UI",
+    title: "Full Stack Web Apps",
     icon: <HiOutlineCodeBracketSquare />,
-    text: "Reusable frontend sections and polished interfaces built with React, Tailwind CSS, and motion.",
-    points: ["Component-based build", "Smooth micro-interactions", "Clean responsive behavior"],
+    text: "Complete MERN stack applications with React frontends, Node.js/Express backends, and MongoDB/PostgreSQL databases — fully deployed and production-ready.",
+    points: ["React + Node.js", "MongoDB / PostgreSQL", "Auth & CRUD"],
+  },
+  {
+    title: "AI & RAG Integrations",
+    icon: <HiOutlineSparkles />,
+    text: "Integration of LLMs and custom Retrieval-Augmented Generation (RAG) into web applications, enabling smart Q&A over custom documents and knowledge bases.",
+    points: ["RAG Pipelines", "Chatbots & LLMs", "Context Retrieval"],
+  },
+  {
+    title: "Next.js Applications",
+    icon: <HiOutlineRectangleGroup />,
+    text: "Server-side rendered and static applications with Next.js, Prisma ORM, and modern deployment on Vercel for optimal performance and SEO.",
+    points: ["SSR & SSG", "Prisma ORM", "API Routes"],
+  },
+  {
+    title: "REST API Development",
+    icon: <HiOutlineServerStack />,
+    text: "RESTful backend services built with Express and MongoDB/PostgreSQL — including authentication, data validation, and clean API architecture.",
+    points: ["Express APIs", "Data Modeling", "Error Handling"],
   },
 ];
 
 const process = [
-  "Understand the project goal",
-  "Shape the layout and visual direction",
-  "Build responsive sections carefully",
-  "Refine details for a cleaner final result",
+  "Plan architecture & data models",
+  "Build backend APIs, database & AI/RAG",
+  "Develop frontend UI & integration",
+  "Deploy, test & optimize",
 ];
 
 function Services() {
@@ -47,17 +54,17 @@ function Services() {
           <div className="max-w-2xl">
             <span className="section-kicker mb-4">What I Can Build</span>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 dark:text-slate-50 md:text-5xl">
-              Modern frontend work that feels more polished, structured, and ready
-              to impress clients.
+              Full-stack and AI services from database to deployment — clean,
+              scalable, and production-ready.
             </h2>
           </div>
           <p className="max-w-xl text-base leading-8 text-slate-600 dark:text-slate-300 md:text-lg">
-            The focus is not just writing code. It is making the final website look
-            clearer, more premium, and more professional for the people who see it.
+            Whether you need a complete MERN application, custom AI/RAG integration,
+            a Next.js dashboard, or a scalable backend API — I build end-to-end solutions.
           </p>
         </motion.div>
 
-        <div className="grid gap-5 lg:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <motion.article
               key={service.title}
@@ -65,13 +72,15 @@ function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: index * 0.08 }}
               viewport={{ once: true, amount: 0.2 }}
-              className="glass-panel rounded-[1.9rem] p-6"
+              className="glass-panel rounded-[1.9rem] p-6 flex flex-col justify-between"
             >
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-600 text-2xl text-white shadow-[0_12px_26px_rgba(14,165,233,0.26)]">
-                {service.icon}
+              <div>
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-600 text-2xl text-white shadow-[0_12px_26px_rgba(14,165,233,0.26)]">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-bold text-slate-950 dark:text-slate-100">{service.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{service.text}</p>
               </div>
-              <h3 className="text-2xl font-bold text-slate-950 dark:text-slate-100">{service.title}</h3>
-              <p className="mt-3 text-base leading-7 text-slate-600 dark:text-slate-300">{service.text}</p>
 
               <div className="mt-6 flex flex-wrap gap-2">
                 {service.points.map((point) => (

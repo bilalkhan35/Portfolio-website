@@ -1,70 +1,119 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { HiArrowUpRight, HiCodeBracket } from "react-icons/hi2";
 
+const FILTERS = ["All", "Full Stack", "AI / RAG", "Frontend", "API"];
+
 const projects = [
+  {
+    title: "TaskFlow — Task Manager",
+    description:
+      "A full-stack task management dashboard built with Next.js and Prisma. Features include task creation, editing, deletion, priority levels, due dates, category filtering, user assignment, and real-time comments.",
+    github: "https://github.com/bilalkhan35/task-manager",
+    demo: "https://task-manager-4ftx.vercel.app/",
+    stack: ["Next.js", "Prisma", "Tailwind", "PostgreSQL"],
+    label: "Full Stack App",
+    accent: "from-slate-950 via-emerald-600 to-teal-400",
+    category: "Full Stack",
+  },
   {
     title: "Islamic Chatbot",
     description:
-      "An AI-powered chatbot that answers questions using Quran and Sunnah, deployed on Vercel.",
+      "An AI-powered web app with RAG-based knowledge retrieval answering questions using Quran and Sunnah, deployed on Vercel.",
     github: "https://github.com/bilalkhan35/Islamic-Ai-app.git",
     demo: "https://islamic-ai-template.vercel.app/",
-    stack: ["React", "AI", "UI/UX"],
-    label: "AI Web App",
+    stack: ["React", "AI / RAG", "LLM", "Tailwind"],
+    label: "AI / RAG Web App",
     accent: "from-slate-950 via-sky-900 to-cyan-500",
+    category: "AI / RAG",
+  },
+  {
+    title: "CineSearch — Movie App",
+    description:
+      "A movie search application powered by the TMDb API. Users can search for movies, browse trending titles, and view detailed movie information with a clean, responsive interface.",
+    github: "https://github.com/bilalkhan35/movie-app",
+    demo: "https://movie-app-wzdf.vercel.app/",
+    stack: ["React", "TMDb API", "Vite", "CSS"],
+    label: "React + API",
+    accent: "from-slate-950 via-rose-600 to-orange-400",
+    category: "API",
+  },
+  {
+    title: "GitHub Explorer",
+    description:
+      "A GitHub profile explorer that lets you search for any GitHub user, view their repositories, stars, and project details — all powered by the GitHub REST API.",
+    github: "https://github.com/bilalkhan35/github-profile-explorer",
+    demo: "https://github-explorer35.netlify.app/",
+    stack: ["React", "GitHub API", "REST", "CSS"],
+    label: "API Integration",
+    accent: "from-slate-950 via-purple-600 to-violet-400",
+    category: "API",
   },
   {
     title: "Portfolio Website",
     description:
-      "A personal portfolio built with React and Tailwind CSS, deployed on Vercel.",
+      "A modern developer portfolio built with React, Tailwind CSS, and Framer Motion, deployed on Vercel.",
     github: "https://github.com/bilalkhan35/Portfolio-website",
     demo: "https://portfolio-website-xnt9.vercel.app/",
-    stack: ["React", "Tailwind", "Branding"],
-    label: "Personal Branding",
+    stack: ["React", "Tailwind", "Framer Motion"],
+    label: "Portfolio",
     accent: "from-slate-900 via-blue-700 to-indigo-500",
+    category: "Frontend",
   },
   {
     title: "Search Photos",
     description:
-      "A fast web app for searching and displaying photos, deployed on Vercel.",
+      "A fast web app for searching and displaying high-resolution photos using an external API, deployed on Vercel.",
     github: "https://github.com/bilalkhan35/Search-photos",
     demo: "https://photovault.vercel.app",
     stack: ["API", "React", "Performance"],
     label: "Search Experience",
     accent: "from-slate-950 via-cyan-700 to-sky-400",
+    category: "API",
   },
   {
     title: "Online Store",
     description:
-      "A clean and responsive e-commerce UI demo, deployed on Vercel.",
+      "A clean and responsive e-commerce UI demo with cart features and modular layouts, deployed on Vercel.",
     github: "",
     demo: "https://online-store-coral-nine.vercel.app/",
     stack: ["Ecommerce", "Layout", "Tailwind"],
     label: "E-Commerce UI",
     accent: "from-slate-950 via-emerald-700 to-cyan-400",
+    category: "Frontend",
   },
   {
     title: "FoodBlog",
     description:
-      "A content-focused food blogging web app, deployed on Netlify.",
+      "A content-focused food blogging web app featuring recipe collections and responsive design, deployed on Netlify.",
     github: "",
     demo: "https://foodiblogapp.netlify.app/",
     stack: ["Blog", "Responsive", "Frontend"],
     label: "Content Website",
     accent: "from-slate-900 via-orange-500 to-amber-300",
+    category: "Frontend",
   },
   {
     title: "Modern SaaS Landing",
     description:
-      "A modern and professional SaaS landing page with conversion-focused design, deployed on Vercel.",
+      "A modern and professional SaaS landing page with conversion-focused design and interactive UI sections, deployed on Vercel.",
     github: "",
     demo: "https://modern-saas-landing-lilac.vercel.app/",
     stack: ["SaaS", "Landing", "Design"],
     label: "SaaS Landing Page",
     accent: "from-slate-950 via-violet-700 to-fuchsia-400",
+    category: "Frontend",
   },
 ];
 
 function Projects() {
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((project) => project.category === activeFilter);
+
   return (
     <section id="projects" className="px-4 py-18 md:px-8 md:py-24">
       <div className="section-shell">
@@ -72,8 +121,8 @@ function Projects() {
           <div className="max-w-2xl">
             <span className="section-kicker mb-4">Selected Work</span>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 dark:text-slate-50 md:text-5xl">
-              Live projects that show how I approach layout, presentation, and
-              frontend quality.
+              Live projects demonstrating full-stack apps, AI/RAG integrations,
+              and modern interfaces.
             </h2>
           </div>
 
@@ -82,21 +131,42 @@ function Projects() {
               Focus Areas
             </p>
             <p className="mt-3 text-base leading-7 text-slate-600 dark:text-slate-300">
-              React interfaces, landing pages, branded portfolios, and modern
-              frontend experiences with cleaner structure and stronger polish.
+              MERN stack apps, Next.js web applications, RAG pipelines & AI chatbots, and API integrations.
             </p>
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project, index) => (
+        {/* Filter Tabs */}
+        <div className="mb-8 flex flex-wrap gap-2">
+          {FILTERS.map((filter) => (
+            <button
+              key={filter}
+              type="button"
+              onClick={() => setActiveFilter(filter)}
+              className={`filter-tab rounded-full px-5 py-2.5 text-sm font-bold transition-all duration-200 cursor-pointer ${
+                activeFilter === filter
+                  ? "filter-tab-active bg-sky-500 text-white shadow-[0_8px_20px_rgba(14,165,233,0.3)]"
+                  : "border border-slate-200 bg-white/80 text-slate-600 hover:border-sky-300 hover:text-sky-700 dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-300 dark:hover:border-sky-500/40 dark:hover:text-sky-300"
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+
+        <motion.div
+          layout
+          className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+        >
+          {filteredProjects.map((project, index) => (
             <motion.article
               key={project.title}
+              layout
               initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: index * 0.08 }}
-              viewport={{ once: true, amount: 0.15 }}
-              className="glass-panel group flex h-full flex-col overflow-hidden rounded-[1.9rem]"
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.4, delay: index * 0.06 }}
+              className="project-card glass-panel group flex h-full flex-col overflow-hidden rounded-[1.9rem]"
             >
               <div
                 className={`relative overflow-hidden bg-gradient-to-br ${project.accent} p-6 text-white`}
@@ -168,7 +238,7 @@ function Projects() {
               </div>
             </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

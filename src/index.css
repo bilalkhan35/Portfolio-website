@@ -205,6 +205,91 @@ html.dark .btn-secondary:hover {
   background-color: rgb(15 23 42);
 }
 
+/* ── Tech Stack Marquee ── */
+.marquee-container {
+  position: relative;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), transparent);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.95), transparent);
+}
+
+html.dark .marquee-container::before {
+  background: linear-gradient(to right, rgba(10, 15, 28, 0.95), transparent);
+}
+
+html.dark .marquee-container::after {
+  background: linear-gradient(to left, rgba(10, 15, 28, 0.95), transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ── Project Card Hover ── */
+.project-card {
+  position: relative;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 24px 48px rgba(14, 165, 233, 0.12),
+    0 0 0 1px rgba(14, 165, 233, 0.15);
+}
+
+html.dark .project-card:hover {
+  box-shadow:
+    0 24px 48px rgba(2, 6, 23, 0.5),
+    0 0 0 1px rgba(56, 189, 248, 0.18);
+}
+
+/* ── Filter Tabs ── */
+.filter-tab {
+  transition: all 200ms ease;
+}
+
+.filter-tab:hover {
+  transform: translateY(-1px);
+}
+
+.filter-tab-active {
+  transform: translateY(-1px);
+}
+
 @media (min-width: 768px) {
   .section-shell {
     width: min(1120px, calc(100% - 3rem));

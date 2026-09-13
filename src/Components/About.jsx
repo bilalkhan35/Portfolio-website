@@ -1,36 +1,48 @@
 import { motion } from "framer-motion";
 import {
-  HiArrowTrendingUp,
   HiOutlineBolt,
+  HiOutlineCodeBracketSquare,
   HiOutlineChatBubbleLeftRight,
+  HiOutlineSparkles,
 } from "react-icons/hi2";
 
 const toolkit = [
   "React",
+  "Next.js",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Prisma",
+  "AI & RAG",
+  "LLM Integration",
   "Tailwind CSS",
+  "REST APIs",
+  "PostgreSQL",
+  "Git / GitHub",
   "Framer Motion",
   "Responsive UI",
-  "Landing Pages",
-  "Portfolio Sites",
-  "Clean UX",
-  "Frontend Polish",
 ];
 
 const commitments = [
   {
-    title: "Visual polish with purpose",
-    icon: <HiArrowTrendingUp />,
-    text: "Sections are designed to look premium while staying clear and useful for real visitors.",
+    title: "Full-stack & AI development",
+    icon: <HiOutlineCodeBracketSquare />,
+    text: "From designing database schemas and building REST APIs to crafting polished React interfaces and integrating AI/RAG capabilities — I handle the full lifecycle.",
   },
   {
-    title: "Performance-minded build",
+    title: "Intelligent AI & RAG systems",
+    icon: <HiOutlineSparkles />,
+    text: "Building retrieval-augmented generation (RAG) pipelines, grounding LLMs on custom knowledge bases, and delivering contextual, accurate AI responses.",
+  },
+  {
+    title: "Performance & scalability",
     icon: <HiOutlineBolt />,
-    text: "I focus on lightweight frontend structure, good hierarchy, and smooth interactions.",
+    text: "Optimized queries, clean component architecture, efficient API calls, and smooth interactions for a fast and reliable user experience.",
   },
   {
     title: "Easy collaboration",
     icon: <HiOutlineChatBubbleLeftRight />,
-    text: "Clear communication, practical revisions, and work that stays aligned with your goal.",
+    text: "Clear communication, practical revisions, and work that stays aligned with your product goals from start to deployment.",
   },
 ];
 
@@ -48,21 +60,15 @@ function About() {
           <div className="glass-panel rounded-[2rem] p-6 md:p-8">
             <span className="section-kicker mb-5">About Me</span>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 dark:text-slate-50 md:text-5xl">
-              Building frontend experiences that help a business feel more
-              trustworthy from the first visit.
+              Full-stack developer building modern web apps with native AI & RAG capabilities.
             </h2>
 
             <p className="mt-6 text-base leading-8 text-slate-600 dark:text-slate-300 md:text-lg">
-              I create clean, modern, and responsive websites focused on clarity,
-              visual hierarchy, and conversion. Whether it is a personal portfolio,
-              service-based landing page, or polished frontend interface, I aim to
-              make the final result look confident and easy to use.
+              I&apos;m a Full Stack MERN & AI Developer who builds complete web applications — from designing RESTful APIs with Node.js and Express, to managing data with MongoDB, PostgreSQL, and Prisma, to creating responsive frontends with React and Next.js.
             </p>
 
             <p className="mt-4 text-base leading-8 text-slate-600 dark:text-slate-300 md:text-lg">
-              My approach is simple: understand the message, improve the
-              presentation, keep the layout responsive, and deliver a site that
-              feels premium without becoming heavy or confusing.
+              I also specialize in integrating AI directly into web applications — building custom RAG (Retrieval-Augmented Generation) pipelines, conversational agents, and contextual AI workflows that make websites intelligent and interactive.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">

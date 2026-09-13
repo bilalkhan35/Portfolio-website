@@ -39,9 +39,8 @@ function Footer() {
               Muhammad Bilal Rathore<span className="text-sky-400">.</span>
             </h2>
             <p className="mt-4 max-w-md text-base leading-7 text-slate-300">
-              Frontend websites and portfolio experiences designed to look
-              cleaner, feel more modern, and present your work with more
-              confidence.
+              Full-stack web applications and AI/RAG solutions built with the MERN stack and Next.js
+              — designed to perform well, scale cleanly, and deliver intelligence.
             </p>
           </div>
 
@@ -85,8 +84,8 @@ function Footer() {
 
         <div className="flex flex-col gap-4 pt-6 md:flex-row md:items-center md:justify-between">
           <p className="text-sm text-slate-400">
-            &copy; {new Date().getFullYear()} Muhammad Bilal Rathore. Built with
-            React and polished for a stronger first impression.
+            &copy; {new Date().getFullYear()} Muhammad Bilal Rathore. Full-stack
+            MERN & AI Developer — built with Next.js & React, shipped with confidence.
           </p>
 
           <button
