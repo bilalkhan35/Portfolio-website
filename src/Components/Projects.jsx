@@ -28,6 +28,17 @@ const projects = [
     category: "AI / RAG",
   },
   {
+    title: "AI Knowledge Base — RAG System",
+    description:
+      "An intelligent document intelligence platform powered by advanced AI embeddings. Upload PDFs containing your knowledge base and ask natural language questions to instantly retrieve accurate answers with source citations—transforming how you interact with your documents.",
+    github: "",
+    demo: "https://ai-knowledge-base-equ2.vercel.app/",
+    stack: ["React", "RAG", "AI Embeddings", "LLM"],
+    label: "AI / RAG Application",
+    accent: "from-slate-950 via-amber-600 to-orange-500",
+    category: "AI / RAG",
+  },
+  {
     title: "CineSearch — Movie App",
     description:
       "A movie search application powered by the TMDb API. Users can search for movies, browse trending titles, and view detailed movie information with a clean, responsive interface.",
@@ -131,7 +142,8 @@ function Projects() {
               Focus Areas
             </p>
             <p className="mt-3 text-base leading-7 text-slate-600 dark:text-slate-300">
-              MERN stack apps, Next.js web applications, RAG pipelines & AI chatbots, and API integrations.
+              MERN stack apps, Next.js web applications, RAG pipelines & AI
+              chatbots, and API integrations.
             </p>
           </div>
         </div>
@@ -154,10 +166,7 @@ function Projects() {
           ))}
         </div>
 
-        <motion.div
-          layout
-          className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
-        >
+        <motion.div layout className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {filteredProjects.map((project, index) => (
             <motion.article
               key={project.title}
